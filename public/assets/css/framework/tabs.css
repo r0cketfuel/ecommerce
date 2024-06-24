@@ -1,0 +1,32 @@
+ul.tabs {
+    margin:                     0 0 20px 0;
+    padding:                    0;
+    list-style:                 none;
+    display:					flex;
+    flex-flow:					row nowrap;
+    gap:						25px;
+    border-bottom:				1px solid rgb(220,220,220);
+}
+
+ul.tabs li {
+	display:					inline-block;
+}
+
+ul.tabs>li:hover, ul.tabs>li:focus, ul.tabs>li.active {
+	cursor:						pointer;
+	color: 						#D10024;
+}
+
+ul.tabs>li:after {
+	content: 					"";
+	margin-top:					2px;
+	display: 					block;
+	width: 						0%;
+	height: 					2px;
+	background-color: 			#D10024;
+	transition: 				0.25s all;
+}
+
+ul.tabs>li:hover:after, ul.tabs>li:focus:after, ul.tabs>li.active:after {
+	width: 						100%;
+}

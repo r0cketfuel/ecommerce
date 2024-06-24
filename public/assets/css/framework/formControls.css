@@ -1,0 +1,510 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 8 version
+*/
+
+:root {
+    --controls-height:              33px;
+}
+
+form {
+    padding:                        0;
+    margin:                         0;
+    border:                         none;
+    font:                           inherit;
+    text-align:                     left;
+    background-color:               transparent;
+    color:                          inherit;
+    list-style:                     none;
+    cursor:                         auto;
+    width:                          100%;
+}
+
+form:focus {
+    outline:                        none;
+}
+
+.input-group {
+	width: 							100%;
+    display:                        -webkit-box;
+    display:                        -ms-flexbox;
+    display:                        flex;
+    -webkit-box-orient:             vertical;
+    -webkit-box-direction:          normal;
+        -ms-flex-flow:              column;
+            flex-flow:              column;
+    gap:                            20px;
+}
+
+.form-error {
+    border:                         1px solid #dc3545
+}
+
+p.field-validation-msg {
+    margin:                         0;
+    font-size:                      11px;
+    color:                          #dc3545;
+}
+
+/*===========*/
+/* FIELDSETS */
+/*===========*/
+fieldset {
+	border: 						1px solid #ccccdd;
+	padding: 						10px;
+	border-radius: 					3px;
+    display:                        -webkit-box;
+    display:                        -ms-flexbox;
+    display:                        flex;
+    -webkit-box-orient:             vertical;
+    -webkit-box-direction:          normal;
+        -ms-flex-flow:              column wrap;
+            flex-flow:              column wrap;
+    gap:                            15px;
+    padding:                        15px;
+}
+
+fieldset legend {
+	margin-left: 					-5px;
+	padding: 						0 5px;
+	color: 							#0d3359;
+	font-size: 						14px;
+}
+
+fieldset + input,
+fieldset + select,
+fieldset + textarea,
+fieldset + button {
+	margin: 						5px 0;
+}
+
+/*==================*/
+/* INPUTS GENERICOS */
+/*==================*/
+input,
+select,
+textarea {
+	border: 						1px solid rgb(220, 220, 220);
+    border-radius:                  4px;
+	-webkit-box-sizing: 			border-box;
+            box-sizing: 			border-box;
+	font-size: 						13px;
+	width: 							100%;
+    padding:                        5px 10px;
+    background-color:               white;
+}
+
+input,
+select {
+	height: 						var(--controls-height);
+}
+
+textarea {
+	height: 						100px;
+	padding: 						10px;
+	resize: 						none;
+}
+
+/* SOLUCION AL PROBLEMA DEL CENTRADO DE LOS LABELS */
+.radio-fix {
+	display: 						-webkit-box;
+	display: 						-ms-flexbox;
+	display: 						flex;
+	-webkit-box-align: 				center;
+        -ms-flex-align: 			center;
+            align-items: 			center;
+    gap:                            5px;
+    user-select:                    none;
+}
+
+input[type=checkbox] {
+    height: 						14px;
+	width: 							14px;
+}
+
+input[type=checkbox] + label {
+    font-size: 						13px;
+}
+
+input[type=radio] {
+	height: 						16px;
+	width: 							16px;
+	margin-right: 					5px;
+}
+
+input[type=radio]:focus {
+    box-shadow:                     none;
+}
+
+input[type=radio] + label {
+	font-size: 						13px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline:                        none;
+    border-color:                   #007bff;
+    box-shadow:                     0px 0px 4px 3px rgba(0, 123, 255, 0.2);
+    -webkit-box-shadow:             0px 0px 5px 4px rgba(0, 123, 255, 0.2);
+    -moz-box-shadow:                0px 0px 5px 4px rgba(0, 123, 255, 0.2);
+    transition:                     border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance:                     none;
+	-webkit-appearance: 			none;
+	margin: 						0;
+}
+
+/* Firefox */
+input[type=number] {
+    -webkit-appearance:             none;
+            appearance:             none;
+	-moz-appearance: 				textfield;
+}
+
+input[type="file"].preview {
+	position: 						absolute;
+	left: 							0;
+	opacity: 						0;
+	top: 							0;
+	bottom: 						0;
+	width: 							100%;
+}
+
+input[type="color"] {
+    background:                     none;
+    height:                         var(--controls-height);
+    width:                          100px;
+    padding:                        0 2px;
+}
+
+label {
+    display:                        -webkit-box;
+    display:                        -ms-flexbox;
+    display:                        flex;
+    -webkit-box-orient:             vertical;
+    -webkit-box-direction:          normal;
+        -ms-flex-direction:         column;
+            flex-direction:         column;
+    width:                          100%;
+    gap:                            4px;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+    color:                          rgb(150,150,150);
+}
+
+
+/*========*/
+/* INPUTS */
+/*=========*/
+input.addToCartQty {
+	background: 					none;
+	border: 						none;
+	text-align: 					center;
+}
+
+/* SELECTOR DE COLORES Y TAMAÑOS */
+select.attribute {
+	width: 							120px;
+}
+
+/*===================*/
+/* BOTONES GENERICOS */
+/*===================*/
+button {
+    user-select:                    none;
+	height: 						var(--controls-height);
+	width: 							100%;
+	cursor: 						pointer;
+	-webkit-box-sizing: 			border-box;
+            box-sizing: 			border-box;
+	text-transform: 				uppercase;
+	border: 						1px solid #6c757d;
+	background:                     none;
+	color: 							black;
+	border-radius: 					4px;
+	outline: 						none;
+    padding:                        0;
+}
+
+.btn-rounded {
+    border-radius:                  var(--controls-height);
+}
+
+button.btn-primary {
+	border: 						1px solid #007bff;
+	background-color: 				#007bff;
+    color:                          white;
+}
+
+button.btn-secondary {
+	border: 						1px solid #6c757d;
+	background-color: 				#6c757d;
+    color:                          white;
+}
+
+button.btn-success {
+	border: 						1px solid #28a745;
+	background-color: 				#28a745;
+    color:                          white;
+}
+
+button.btn-danger {
+	border: 						1px solid #dc3545;
+	background-color: 				#dc3545;
+    color:                          white;
+}
+
+/* MARGEN BOTONES CON FONTAWESOME */
+button span {
+	margin-right: 					10px;
+}
+
+.switch {
+    display:                        inline-block;
+    height: 						18px;
+    position:                       relative;
+    width:                          34px;
+}
+
+.switch input {
+    display:                        none;
+}
+
+.slider {
+    background-color:               #ccc;
+    bottom:                         0;
+    cursor:                         pointer;
+    left:                           0;
+    position:                       absolute;
+    right:                          0;
+    top:                            0;
+    -webkit-transition:             .35s;
+    -o-transition:                  .35s;
+    transition:                     .35s;
+}
+
+.slider:before {
+    position:                       absolute;
+    left:                           4px;
+    bottom:                         4px;
+    background-color:               #fff;
+    content:                        "";
+    height:                         10px;
+    width:                          10px;
+    -webkit-transition:             .35s;
+    -o-transition:                  .35s;
+    transition:                     .35s;
+}
+
+input:checked + .slider {
+    background-color:               #66bb6a;
+}
+
+input:checked + .slider:before {
+    -webkit-transform:              translateX(16px);
+        -ms-transform:              translateX(16px);
+            transform:              translateX(16px);
+}
+
+.slider.round {
+    border-radius:                  24px;
+}
+
+.slider.round:before {
+    border-radius:                  50%;
+}
+
+/*=========*/
+/* BOTONES */
+/*=========*/
+button.btn-search {
+    display:                        -webkit-box;
+    display:                        -ms-flexbox;
+    display:                        flex;
+    -webkit-box-pack:               center;
+        -ms-flex-pack:              center;
+            justify-content:        center;
+    -webkit-box-align:              center;
+        -ms-flex-align:             center;
+            align-items:            center;
+    max-width:                      40px;
+	background: 					none;
+	border: 						none;
+	color: 							black;
+    position: 						absolute;
+    top: 							0;
+    right: 							0;
+}
+
+button.btn-newsletter {
+    display:                        -webkit-box;
+    display:                        -ms-flexbox;
+    display:                        flex;
+    -webkit-box-pack:               center;
+        -ms-flex-pack:              center;
+            justify-content:        center;
+    -webkit-box-align:              center;
+        -ms-flex-align:             center;
+            align-items:            center;
+    max-width:                      150px;
+    border-radius:                  0;
+}
+
+button.addToCart {
+	border: 						1px solid brown;
+	background-color: 				brown;
+}
+
+button.filterButton {
+    width:                          50px;
+}
+
+
+button.deleteButton,
+button.minusButton,
+button.plusButton,
+button.updateCart,
+button.removeFromCart {
+	border: 						none;
+	background: 					none;
+	color: 							black;
+	margin: 						0;
+	padding: 						0;
+    width:                          var(--controls-height);
+}
+
+button.minusButton {
+	text-align: 					left;
+}
+
+button.plusButton {
+	text-align: 					right;
+}
+
+.button--loading {
+	display:                        -webkit-box;
+	display:                        -ms-flexbox;
+	display:                        flex;
+	-webkit-box-pack:               center;
+        -ms-flex-pack:              center;
+            justify-content:        center;
+	-webkit-box-align:              center;
+        -ms-flex-align:             center;
+            align-items:            center;
+}
+
+.button--loading::after {
+	content:                        "";
+	position:                       absolute;
+	width:                          16px;
+	height:                         16px;
+	border:                         5px solid transparent;
+	border-top-color:               #ffffff;
+	border-radius:                  50%;
+	-webkit-animation:              button-loading-spinner 1s ease infinite;
+            animation:              button-loading-spinner 1s ease infinite;
+}
+
+@-webkit-keyframes button-loading-spinner {
+	from {
+		-webkit-transform: rotate(0turn);
+                transform: rotate(0turn)
+	}
+
+	to {
+		-webkit-transform: rotate(1turn);
+                transform: rotate(1turn)
+	}
+}
+
+@keyframes button-loading-spinner {
+	from {
+		-webkit-transform: rotate(0turn);
+                transform: rotate(0turn)
+	}
+
+	to {
+		-webkit-transform: rotate(1turn);
+                transform: rotate(1turn)
+	}
+}
+
+
+/*===================*/
+/*  FLOATING LABELS  */
+/*===================*/
+.floating-label {
+	position: 						relative;
+	border: 						1px solid rgb(220, 220, 220);
+	margin: 						0;
+	background-color: 				white;
+	border-radius: 					4px;
+}
+
+.floating-label input,
+.floating-label select {
+	font-family: 					Roboto-Regular;
+	-webkit-box-sizing: 			border-box;
+            box-sizing: 			border-box;
+	width: 							100%;
+	padding: 						10px 10px 0 10px;
+	height: 						40px;
+	border: 						none;
+	background:                     none;
+	outline:                        none;
+}
+
+.floating-label label {
+	font-family:                    Roboto-Regular;
+	position:                       absolute;
+	top:                            36%;
+	left:                           10px;
+	color:                          black;
+	font-size:                      12px;
+	pointer-events:                 none;
+	-webkit-transition:             .2s;
+	-o-transition:                  .2s;
+	transition:                     .2s;
+}
+
+.floating-label select {
+	padding:                        10px 10px 0 6px;
+}
+
+.floating-label select~label {
+	top:                            3px;
+	left:                           10px;
+	font-size:                      10px;
+	color:                          gray;
+}
+
+.floating-label input:not(:-moz-placeholder-shown)~label, .floating-label select:not(:-moz-placeholder-shown)~label {
+	top:                            3px;
+	font-size:                      11px;
+	color:                          gray;
+}
+
+.floating-label input:not(:-ms-input-placeholder)~label, .floating-label select:not(:-ms-input-placeholder)~label {
+	top:                            3px;
+	font-size:                      11px;
+	color:                          gray;
+}
+
+.floating-label input:focus~label,
+.floating-label input:not(:placeholder-shown)~label,
+.floating-label select:focus~label,
+.floating-label select:not(:placeholder-shown)~label {
+	top:                            3px;
+	font-size:                      11px;
+	color:                          gray;
+}

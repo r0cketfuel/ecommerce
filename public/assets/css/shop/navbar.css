@@ -1,0 +1,298 @@
+:root {
+    --navbar-font-color:			white;
+	--navbar-logo-font-color:		white;
+	--navbar-menu-font-color:		black;
+	--navbar-sidebar-font-color:	white;
+
+	--navbar-menu-background:		rgb(240,240,240);
+	--navbar-sidebar-background:	black;
+}
+
+nav {
+	user-select: 				    none;
+}
+
+.navbar-container {
+    margin:                         0 auto;
+    padding-bottom:                 0;
+    max-width:                      var(--containers-max-width);
+    box-sizing:                     border-box;
+}
+
+.navbar .links {
+    margin:                         0;
+    padding:                        0;
+	list-style: 					none;
+}
+
+.navbar .sub-menu {
+	margin: 					    0;
+	padding: 					    0;
+}
+
+.navbar .logo {
+    padding-left:                   10px;
+}
+
+.navbar .logo a {
+	font-size: 					    30px;
+    letter-spacing:                 -2px;
+}
+
+.navbar .links {
+	display: 					    flex;
+}
+
+.navbar .links li {
+	position: 					    relative;
+	display: 					    flex;
+	align-items: 				    center;
+	list-style:					    none;
+	padding: 					    10px 10px;
+	background:					    none;
+    cursor:                         pointer;
+}
+
+.navbar .links li.main-menu div,
+.navbar .links li.main-menu li.more div {
+	width: 						    100%;
+	display: 					    flex;
+	align-items: 				    center;
+	justify-content: 			    space-between;
+}
+
+.navbar .links li a {
+	text-decoration: 			    none;
+	white-space: 				    nowrap;
+}
+
+.links li:hover .menu-arrow.arrow {
+	transform: 					    rotate(180deg);
+}
+
+.navbar .links li .arrow {
+	width: 						    20px;
+	font-size: 					    13px;
+	text-align: 				    center;
+	display: 					    inline-block;
+	transition: 				    all 0.4s ease;
+	color:						    orangered;
+}
+
+.navbar .links li .sub-menu {
+	position: 					absolute;
+	top: 						36px;
+	left: 						0;
+	line-height: 				40px;
+	background:					white;
+	box-shadow: 				5px 5px 10px 0px rgba(0,0,0,0.2);
+	display: 					none;
+	z-index: 					10;
+	animation-name: 			fadein;
+	animation-duration: 		0.3s;
+	min-width: 					150px;
+	font-size:					13px;
+}
+
+@keyframes fadein
+{
+	from {opacity: 0} to {opacity: 1}
+}
+
+.navbar .links li:hover .sub-menu {
+	display: 					block;
+}
+
+.navbar .links li .sub-menu li {
+	padding: 					0 10px;
+	border-bottom: 				1px solid rgb(240,240,240);
+}
+
+.navbar .links li .sub-menu li:last-child {
+	border-bottom: 				none;
+}
+
+.navbar .links li .sub-menu .more-arrow {
+	line-height: 				40px;
+}
+
+.navbar .links li .sub-menu .more-sub-menu {
+	position: 					absolute;
+	top: 						0;
+	left: 						100%;
+	z-index: 					10;
+	display: 					none;
+}
+
+.links li .sub-menu .more:hover .more-sub-menu {
+	display: 					block;
+}
+
+.navbar .nav-links .sidebar-logo {
+	display: 					none;
+}
+
+.navbar .responsive-nav-icon {
+	display: 					none;
+}
+
+@media (max-width:768px)
+{
+	.navbar .logo {
+		display: 				none;
+	}
+	
+	.navbar .responsive-nav-icon {
+		display: 				block;
+		cursor: 				pointer;
+	}
+
+	/* SIDEBAR LOGO & BOTON CERRAR */
+	.navbar .nav-links .sidebar-logo {
+		display: 				flex;
+		justify-content: 		space-between;
+        align-items:            flex-start;
+	}
+
+	/* SIDEBAR LOGO */
+	.sidebar-logo .logo-name {
+		font-size: 				20px;
+	}
+	
+	/* BOTON CERRAR */
+	.sidebar-logo .font-awesome-icon-close {
+		cursor:					pointer;
+        padding:                0 12px;
+	}
+
+	/* SIDEBAR */
+	.navbar .nav-links {
+        height: 100%;
+		position: 				fixed;
+		top: 					0;
+		left: 					-150%; /* OJO ACA ERA 100 */
+		display: 				block;
+		max-width: 				300px;
+		width: 					100%;
+		background: 			var(--navbar-sidebar-background);
+		line-height: 			40px;
+		padding: 				20px;
+		box-shadow: 			0 5px 10px rgba(0, 0, 0, 0.2);
+		transition: 			all 0.5s ease;
+		z-index: 				10;
+		color:					var(--navbar-sidebar-font-color);
+	}
+
+	.navbar .links {
+		display: 				block;
+		margin: 				40px 0 0 0;
+		padding:				0;
+	}
+
+	.navbar .links li.main-menu div, .navbar .links li.main-menu li.more div {
+		width: 						unset
+	}
+
+	.navbar .links li {
+		display: 				block;
+		padding:				0;
+		background: 			var(--navbar-sidebar-background);
+	}
+
+	.navbar .links li a.submenu-link {
+		color:					var(--navbar-sidebar-font-color);
+	}
+
+    .navbar .links .more-sub-menu a {
+        color: 				    var(--navbar-sidebar-font-color);
+    }
+
+	.navbar .links li .arrow {
+		line-height: 			40px;
+	}
+
+	.navbar .links li {
+		border-bottom:			1px solid rgb(40,40,40);
+	}
+
+	.navbar .links li .sub-menu	{
+		position: 				relative;
+		top: 					0;
+		box-shadow: 			none;
+		display: 				none;
+		background: 			var(--navbar-sidebar-background);
+		color:					var(--navbar-sidebar-font-color);		
+	}
+
+	.navbar .links li .sub-menu li {
+		border-bottom: 			none;
+		padding: 				0 0 0 20px;
+	}
+
+	.navbar .links li .sub-menu .more-sub-menu {
+		display: 				none;
+		position: 				relative;
+		left: 					0;
+	}
+
+	.navbar .links li .sub-menu .more-sub-menu li {
+		display: 				flex;
+		align-items: 			center;
+		justify-content: 		space-between;
+	}
+
+	.links li:hover .menu-arrow.arrow {
+		transform: 				unset;
+	}
+
+	.navbar .links li .sub-menu .more-sub-menu {
+		display: 				none;
+	}
+	
+	/* DESACTIVA LA APARICION DEL SUBMENU AL PASAR CON EL MOUSE */
+	.navbar .links li:hover .sub-menu {
+		display: 				none;
+	}
+
+	/* DESACTIVA LA APARICION DEL SUB SUBMENU AL PASAR CON EL MOUSE */
+	.links li .sub-menu .more:hover .more-sub-menu {
+		display: 				none;
+	}
+
+	.navbar .nav-links .links .main-menu.active .main-menu-links.sub-menu {
+		display: 				block;
+		position:				relative;
+		top: 					0;
+		left: 					0;
+	}
+
+	.navbar .nav-links .links .main-menu .menu-arrow.arrow {
+		transform: 				rotate(270deg);
+	}
+
+	.navbar .nav-links .links .main-menu.active .menu-arrow.arrow {
+		transform: 				rotate(360deg);
+	}
+
+	.navbar .nav-links .links .main-menu.active .more.active .more-sub-menu.sub-menu {
+		display: 				block;
+		position:				relative;
+		top: 					0;
+		left: 					0;
+	}
+	
+	.navbar .nav-links .links .main-menu .more.active .more-arrow.arrow	{
+		transform: 				rotate(270deg);
+	}
+	
+	.navbar .nav-links .links .main-menu.active .more.active .more-arrow.arrow {
+		transform: 				rotate(90deg);
+	}
+}
+
+@media (max-width:370px)
+{
+	.navbar .nav-links {
+		max-width: 				100%;
+	} 
+}

@@ -1,0 +1,94 @@
+.login-container {
+    margin:                     0;
+    padding:                    0;
+    height:                     100vh;
+    display:                    flex;
+    justify-content:            center;
+    align-items:                center;
+}
+
+.login-panel {
+    display:                    flex;
+    width:                      100%;
+    max-width:                  600px;
+    margin:                     0 20px;
+    background-color:           white;
+    min-height:                 450px;
+    border-radius:              10px;
+    box-shadow:                 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform:                  translateY(-200%);
+    animation-name:             slide-in;
+    animation-duration:         1s;
+    animation-timing-function:  cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-fill-mode:        forwards;
+}
+
+.left-panel, .right-panel {
+    display:                    flex;
+    flex-direction:             column;
+    justify-content:            center;
+    width:                      50%;
+    padding:                    20px;
+    box-sizing:                 border-box;
+}
+
+.left-panel {
+    border-radius:              10px 0 0 10px;
+    justify-content:            space-between;
+}
+
+input {
+    background-color:           #eee;
+}
+
+.left-panel h1 {
+    text-align:                 center;
+}
+
+.left-panel p, .left-panel a {
+    margin:                     0;
+}
+
+.left-panel span {
+    color:                      #5ca4d1;
+}
+
+.right-panel {
+    border-radius:              0 10px 10px 0;
+    text-align:                 center;
+    background:                 -webkit-linear-gradient(to right, #2b8eff, #4154ff);
+    background:                 linear-gradient(to right, #2b8eff, #4154ff);
+    background-repeat:          no-repeat;
+    background-size:            cover;
+    background-position:        0 0;
+    color:                      white;
+}
+
+h1, h2 {
+    margin:                     0;
+}
+
+@keyframes slide-in {
+    from {
+        transform:              translateY(-200%);
+    }
+    to {
+        transform:              translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .login-panel {
+        flex-direction:     column;
+        margin:             0 50px;
+    }
+
+    .right-panel {
+        display:            none;
+    }
+
+    .left-panel {
+        flex:               1;
+        width:              100%;
+    }
+}

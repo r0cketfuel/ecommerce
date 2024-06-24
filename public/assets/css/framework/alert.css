@@ -1,0 +1,84 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 8 version
+*/
+
+.alert {
+    user-select:                    none;
+    display:                        -webkit-box;
+    display:                        -ms-flexbox;
+    display:                        flex;
+    -webkit-box-pack:               justify;
+        -ms-flex-pack:              justify;
+            justify-content:        space-between;
+    -webkit-box-align:              center;
+        -ms-flex-align:             center;
+            align-items:            center;
+    border-radius:                  4px;
+    gap:                            20px;
+    padding:                        10px 20px;
+	-webkit-animation-name: 		fade-in;
+            animation-name: 		fade-in;
+	-webkit-animation-duration: 	0.25s;
+            animation-duration: 	0.25s;
+    position:                       fixed;
+    top:                            40px;
+    right:                          40px;
+    z-index:                        99999;
+    color:                          white;
+}
+
+.alert.success {
+	border: 						1px solid #28a745;
+	background-color: 				#28a746;
+}
+
+.alert.danger {
+    border: 						1px solid #dc3545;
+	background-color: 				#dc3535;
+}
+
+.alert.info {
+	border: 						1px solid #007bff;
+	background-color: 				#007bff;
+}
+
+.alert.warning {
+	border: 						1px solid #fff674;
+	background-color: 				#fff674;
+}
+
+.alert .closebtn {
+    cursor:                         pointer;
+    -webkit-transition:             0.3s;
+    -o-transition:                  0.3s;
+    transition:                     0.3s;
+    width:                          20px;
+    text-align:                     center;
+}
+
+.alert .closebtn:hover {
+    color:                          black;
+}
+
+@-webkit-keyframes fade-in
+{
+	from {opacity: 0} to {opacity: 1}
+}
+
+@keyframes fade-in
+{
+	from {opacity: 0} to {opacity: 1}
+}
+
+@-webkit-keyframes fade-out
+{
+	from {opacity: 1} to {opacity: 0}
+}
+
+@keyframes fade-out
+{
+	from {opacity: 1} to {opacity: 0}
+}

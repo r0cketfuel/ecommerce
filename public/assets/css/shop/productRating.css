@@ -1,0 +1,20 @@
+.product-rating {
+	user-select: 					none;
+}
+
+.product-stars span {
+	font-size:						20px;
+	color:							rgb(240,240,50);
+	cursor: 						pointer;
+}
+
+.product-average {
+	margin-left: 					10px;
+	display:						inline-block;
+}
+
+.product-average,
+.product-votes {
+    color: 							rgb(150,150,150);
+    font-size:						12px;
+}

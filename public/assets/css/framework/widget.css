@@ -1,0 +1,132 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 20 version
+*/
+
+.widget-grid {
+	display:                        -ms-grid;
+	display:                        grid;
+	grid-template-columns:          repeat(auto-fit, minmax(300px, 1fr));
+	gap:                            20px 20px;
+	justify-items:                  center;
+}
+
+.dashboard-widget {
+	-webkit-box-sizing:             border-box;
+            box-sizing:             border-box;
+	width:                          100%;
+	padding:                        20px;
+	color:                          white;
+	border-radius:                  10px;
+	-webkit-box-shadow:             5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+            box-shadow:             5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+    -webkit-user-select:            none;
+		-moz-user-select:           none;
+        -ms-user-select:            none;
+            user-select:            none;
+}
+
+.widget-content {
+	display:                        -ms-grid;
+	display:                        grid;
+	height:                         100%;
+    grid-template-areas:        	"titulo     titulo"
+                                    "valor      icono"
+                                    "nota       nota"
+                                    "link       .";
+    -ms-grid-rows:             		1fr;
+    grid-template-rows:             1fr;                                  
+    gap:                            10px;
+}
+
+.widget-title {
+	-ms-grid-row:           		1;
+	-ms-grid-column:        		1;
+	font-size:              		18px;
+	grid-area:              		titulo;
+}
+
+.widget-value {
+	-ms-grid-row:           		3;
+	-ms-grid-column:        		1;
+	font-size:              		45px;
+	-ms-grid-row-align:     		center;
+        align-self:         		center;
+	grid-area:              		valor;
+}
+
+.widget-link {
+	-ms-grid-row:           		7;
+	-ms-grid-column:        		1;
+	-ms-grid-row-align:     		center;
+        align-self:         		center;
+	grid-area:              		link;
+}
+
+.widget-link a {
+	background-color: 				white;
+	padding: 						5px 20px;
+	text-align: 					center;
+	border-radius: 					20px;
+	text-decoration: 				none;
+	color: 							rgb(50, 50, 50);
+}
+
+.widget-link a:hover {
+	background-color: 				black;
+	color:			 				white;
+}
+
+.widget-icon {
+	-ms-grid-row: 					3;
+	-ms-grid-column: 				3;
+	grid-area: 						icono;
+	-ms-grid-row-align: 			center;
+		align-self: 				center;
+	-ms-grid-column-align: 			end;
+		justify-self: 				end;
+	font-size: 						42px;
+}
+
+.widget-note {
+	-ms-grid-row: 					5;
+	-ms-grid-column: 				1;
+	grid-area: 						nota;
+}
+
+.dashboard-widget[data-type="green"] {
+	background: 					rgb(45, 189, 88);
+	background: 					-o-linear-gradient(left, rgba(45, 189, 88, 1) 0%, rgba(45, 189, 88, 1) 60%, rgba(34, 135, 64, 1) 100%);
+	background: 					-webkit-gradient(linear, left top, right top, from(rgba(45, 189, 88, 1)), color-stop(60%, rgba(45, 189, 88, 1)), to(rgba(34, 135, 64, 1)));
+	background: 					linear-gradient(90deg, rgba(45, 189, 88, 1) 0%, rgba(45, 189, 88, 1) 60%, rgba(34, 135, 64, 1) 100%);
+}
+
+.dashboard-widget[data-type="orange"] {
+	background: 					rgb(248, 81, 8);
+	background: 					-o-linear-gradient(left, rgba(248, 81, 8, 1) 0%, rgba(248, 81, 8, 1) 60%, rgba(190, 76, 26, 1) 100%);
+	background: 					-webkit-gradient(linear, left top, right top, from(rgba(248, 81, 8, 1)), color-stop(60%, rgba(248, 81, 8, 1)), to(rgba(190, 76, 26, 1)));
+	background: 					linear-gradient(90deg, rgba(248, 81, 8, 1) 0%, rgba(248, 81, 8, 1) 60%, rgba(190, 76, 26, 1) 100%);
+}
+
+.dashboard-widget[data-type="red"] {
+	background: 					rgb(248, 8, 8);
+	background: 					-o-linear-gradient(left, rgba(248, 8, 8, 1) 0%, rgba(248, 8, 8, 1) 60%, rgba(213, 27, 27, 1) 100%);
+	background: 					-webkit-gradient(linear, left top, right top, from(rgba(248, 8, 8, 1)), color-stop(60%, rgba(248, 8, 8, 1)), to(rgba(213, 27, 27, 1)));
+	background: 					linear-gradient(90deg, rgba(248, 8, 8, 1) 0%, rgba(248, 8, 8, 1) 60%, rgba(213, 27, 27, 1) 100%);
+}
+
+.dashboard-widget[data-type="blue"] {
+	background: 					rgb(87, 123, 242);
+	background: 					-o-linear-gradient(left, rgba(87, 123, 242, 1) 0%, rgba(87, 123, 242, 1) 60%, rgba(8, 64, 248, 1) 100%);
+	background: 					-webkit-gradient(linear, left top, right top, from(rgba(87, 123, 242, 1)), color-stop(60%, rgba(87, 123, 242, 1)), to(rgba(8, 64, 248, 1)));
+	background: 					linear-gradient(90deg, rgba(87, 123, 242, 1) 0%, rgba(87, 123, 242, 1) 60%, rgba(8, 64, 248, 1) 100%);
+}
+
+.dashboard-widget[data-type="yellow"] {
+	background: 					rgb(255, 204, 42);
+	background: 					-o-linear-gradient(left, rgba(255, 204, 42, 1) 0%, rgba(255, 204, 42, 1) 60%, rgba(218, 189, 47, 1) 100%);
+	background: 					-webkit-gradient(linear, left top, right top, from(rgba(255, 204, 42, 1)), color-stop(60%, rgba(255, 204, 42, 1)), to(rgba(218, 189, 47, 1)));
+	background: 					linear-gradient(90deg, rgba(255, 204, 42, 1) 0%, rgba(255, 204, 42, 1) 60%, rgba(218, 189, 47, 1) 100%);
+}

@@ -1,0 +1,45 @@
+.progress-indicator {
+    user-select: 			none;
+    display: 				grid;
+    grid-template-columns: 	repeat(4, 1fr);
+    grid-template-rows: 	repeat(2, auto);
+    justify-content: 		space-between;
+    justify-items: 			center;
+    gap: 					5px;
+    text-align: 			center;
+    background-color: 		#fafafa;
+    border: 				1px solid rgb(220, 220, 220);
+    border-radius: 			4px;
+    padding: 				25px;
+}
+
+.progress-indicator .step-number {
+    border-radius: 			50%;
+    height: 				32px;
+    width: 					32px;
+    border: 				3px solid rgb(220, 220, 220);
+    display: 				flex;
+    justify-content: 		center;
+    align-items: 			center;
+    font-weight: 			bold;
+}
+
+.progress-indicator .step-number.current-step {
+    border: 				3px solid rgb(30, 200, 30);
+}
+
+.progress-indicator .success {
+    background-color: 		rgb(80, 210, 80);
+    border: 				3px solid rgb(30, 200, 30);
+    color: 					white;
+}
+
+/* .progress-indicator div {
+    height: 				3px;
+    flex:					1;
+    background-color: 		rgb(200,200,200);
+} */
+
+.progress-indicator div.success {
+    background-color: 		rgb(80, 210, 80);
+}

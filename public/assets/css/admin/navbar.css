@@ -1,0 +1,337 @@
+:root {
+    --navbar-font-color:			white;
+	--navbar-logo-font-color:		white;
+	--navbar-menu-font-color:		black;
+	--navbar-sidebar-font-color:	white;
+
+	--navbar-menu-background:		rgb(240, 240, 240);
+	--navbar-sidebar-background:	rgb(20, 20, 20);
+}
+
+nav {
+	user-select: 				    none;
+}
+
+nav .navbar {
+	display: 					    flex;
+	flex-flow: 						column nowrap;
+    background-color:               var(--navbar-sidebar-background);
+}
+
+nav .navbar .links {
+	list-style-type: 			    none;
+	margin: 					    0;
+	padding: 					    0;
+}
+
+nav .navbar .sub-menu {
+	margin: 					    0;
+	padding: 					    0;
+}
+
+nav .navbar .logo {
+	padding:					    10px 0 5px 10px;
+}
+
+nav .navbar .logo a {
+	color:						    var(--navbar-logo-font-color);
+	font-size: 					    26px;
+	text-decoration: 			    none;
+	letter-spacing: 				-1px;
+}
+
+nav .navbar .nav-links {
+	height: 					    100%;
+}
+
+nav .navbar .links {
+	display: 					    flex;
+}
+
+nav .navbar .links li {
+	position: 					    relative;
+	display: 					    flex;
+	align-items: 				    center;
+	list-style:					    none;
+	padding: 					    10px 10px;
+	background:					    none;
+}
+
+nav .navbar .links li.main-menu div,
+nav .navbar .links li.main-menu li.more div {
+	width: 						    100%;
+	display: 					    flex;
+	align-items: 				    center;
+	justify-content: 			    space-between;
+}
+
+nav .navbar .links li a {
+	text-decoration: 			    none;
+	white-space: 				    nowrap;
+	color: 						    var(--navbar-font-color);
+}
+
+nav .navbar .links .submenu-link li {
+	color: 						    var(--navbar-menu-font-color);
+}
+
+nav .navbar .links .more-sub-menu a {
+	color: 						    var(--navbar-menu-font-color);
+}
+
+.links li:hover .menu-arrow.arrow {
+	transform: 					    rotate(180deg);
+}
+
+nav .navbar .links li .arrow {
+	width: 						    20px;
+	font-size: 					    10px;
+	text-align: 				    center;
+	display: 					    inline-block;
+	transition: 				    all 0.3s ease;
+	color:						    orangered;
+}
+
+nav .navbar .links li .sub-menu {
+	position: 					    absolute;
+	top: 						    36px;
+	left: 						    0;
+	line-height: 				    40px;
+	background:					    var(--navbar-menu-background);
+	box-shadow: 				    5px 5px 10px 0px rgba(0,0,0,0.2);
+	display: 					    none;
+	z-index: 					    2;
+	animation-name: 			    fadein;
+	animation-duration: 		    0.3s;
+	min-width: 					    150px;
+	font-size:					    13px;
+}
+
+@keyframes fadein {
+	from {opacity: 0} to {opacity: 1}
+}
+
+nav .navbar .links li:hover .sub-menu {
+	display: 					    block;
+}
+
+nav .navbar .links li .sub-menu li {
+	padding: 					    0 10px;
+}
+
+nav .navbar .links li .sub-menu li a {
+	width: 					    	100%;
+}
+
+nav .navbar .links li .sub-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav .navbar .links li .sub-menu li:last-child {
+	border-bottom: 				    none;
+}
+
+nav .navbar .links li .sub-menu .more-arrow {
+	line-height: 				    40px;
+}
+
+nav .navbar .links li .sub-menu .more-sub-menu {
+	position: 					    absolute;
+	top: 						    0;
+	left: 						    100%;
+	z-index: 					    1;
+	display: 					    none;
+}
+
+nav .links li .sub-menu .more:hover .more-sub-menu {
+	display: 					    block;
+}
+
+nav .links li .sub-menu .more:hover .more-sub-menu a {
+	width: 							100%;
+}
+
+nav .navbar .nav-links .sidebar-logo {
+	display: 					    none;
+}
+
+nav .navbar .responsive-nav-icon {
+	display: 					    none;
+}
+
+@media (max-width:900px) {
+
+	nav .navbar .logo a {
+		font-size: 					24px;
+	}
+
+	nav .navbar .nav-links {
+		font-size: 					13px;
+	}
+}
+
+@media (max-width:768px) {
+
+	nav .navbar .logo {
+		display: 				    none;
+	}
+	
+	nav .navbar .responsive-nav-icon {
+		display: 				    block;
+		cursor: 				    pointer;
+		padding: 					10px;
+		font-size: 1.5rem;
+		color: 						var(--navbar-sidebar-font-color);
+	}
+
+	/* SIDEBAR LOGO & BOTON CERRAR */
+	nav .navbar .nav-links .sidebar-logo {
+		display: 				    flex;
+		align-items: 			    center;
+		justify-content: 		    space-between;
+	}
+
+	/* SIDEBAR LOGO */
+	.sidebar-logo .logo-name {
+		color:					    var(--navbar-logo-font-color);
+		font-size: 				    1.25rem;
+	}
+	
+	/* BOTON CERRAR */
+	.sidebar-logo .font-awesome-icon-close {
+		cursor:					    pointer;
+		font-size: 				    1rem;
+	}
+
+	/* SIDEBAR */
+	nav .navbar .nav-links {
+		position: 				    fixed;
+		top: 					    0;
+		left: 					    -150%; /* OJO ACA ERA 100 */
+		display: 				    block;
+		max-width: 				    300px;
+		width: 					    100%;
+		background: 			    var(--navbar-sidebar-background);
+		line-height: 			    40px;
+		padding: 				    20px;
+		box-shadow: 			    0 5px 10px rgba(0, 0, 0, 0.2);
+		transition: 			    all 0.5s ease;
+		z-index: 				    10;
+		color:					    var(--navbar-sidebar-font-color);
+	}
+
+	nav .navbar .links {
+		display: 				    block;
+		margin: 				    40px 0 0 0;
+		padding:				    0;
+	}
+
+	nav .navbar .links li.main-menu div,
+	nav .navbar .links li.main-menu li.more div {
+		width: 						unset
+	}
+
+	nav .navbar .links li {
+		display: 				    block;
+		padding:				    0;
+		background: 			    var(--navbar-sidebar-background);
+	}
+
+	nav .navbar .links li a.submenu-link {
+		color:					    var(--navbar-sidebar-font-color);
+	}
+
+    nav .navbar .links .more-sub-menu a {
+        color: 				        var(--navbar-sidebar-font-color);
+    }
+
+	nav .navbar .links li .arrow {
+		line-height: 			    40px;
+	}
+
+	nav .navbar .links li {
+		border-bottom:			    1px solid rgb(40,40,40);
+	}
+
+	nav .navbar .links li .sub-menu {
+		position: 				    relative;
+		top: 					    0;
+		box-shadow: 			    none;
+		display: 				    none;
+		background: 			    var(--navbar-sidebar-background);
+		color:					    var(--navbar-sidebar-font-color);		
+	}
+
+	nav .navbar .links li .sub-menu li {
+		border-bottom: 			    none;
+		padding: 				    0 0 0 20px;
+	}
+
+	.navbar .links li .sub-menu .more-sub-menu {
+		display: 				    none;
+		position: 				    relative;
+		left: 					    0;
+	}
+
+	.navbar .links li .sub-menu .more-sub-menu li {
+		display: 				    flex;
+		align-items: 			    center;
+		justify-content: 		    space-between;
+	}
+
+	.links li:hover .menu-arrow.arrow {
+		transform: 				    unset;
+	}
+
+	.navbar .links li .sub-menu .more-sub-menu {
+		display: 				    none;
+	}
+
+	/* DESACTIVA LA APARICION DEL SUBMENU AL PASAR CON EL MOUSE */
+	nav .navbar .links li:hover .sub-menu {
+		display: 				    none;
+	}
+
+	/* DESACTIVA LA APARICION DEL SUB SUBMENU AL PASAR CON EL MOUSE */
+	.links li .sub-menu .more:hover .more-sub-menu {
+		display: 				    none;
+	}
+
+	.navbar .nav-links .links .main-menu.active .main-menu-links.sub-menu {
+		display: 				    block;
+		position:				    relative;
+		top: 					    0;
+		left: 					    0;
+	}
+
+	.navbar .nav-links .links .main-menu .menu-arrow.arrow {
+		transform: 				    rotate(270deg);
+	}
+
+	.navbar .nav-links .links .main-menu.active .menu-arrow.arrow {
+		transform: 				    rotate(360deg);
+	}
+
+	.navbar .nav-links .links .main-menu.active .more.active .more-sub-menu.sub-menu {
+		display: 				    block;
+		position:				    relative;
+		top: 					    0;
+		left: 					    0;
+	}
+	
+	.navbar .nav-links .links .main-menu .more.active .more-arrow.arrow {
+		transform: 				    rotate(270deg);
+	}
+	
+	.navbar .nav-links .links .main-menu.active .more.active .more-arrow.arrow {
+		transform: 				    rotate(90deg);
+	}
+}
+
+@media (max-width:370px) {
+
+	nav .navbar .nav-links
+	{
+		max-width: 				    100%;
+	} 
+}

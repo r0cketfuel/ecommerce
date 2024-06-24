@@ -1,0 +1,136 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 8 version
+*/
+
+:root {
+    --controls-height:      33px;
+}
+
+a {
+    text-decoration:        none;
+}
+
+a:link,
+a:visited,
+a:focus,
+a:active {
+    color:                  unset;
+}
+
+a.btn-link {
+    user-select:            none;
+	height: 				var(--controls-height);
+	width: 					100%;
+	cursor: 				pointer;
+	-webkit-box-sizing:		border-box;
+            box-sizing: 	border-box;
+	font-size: 				13px;
+	text-transform: 		uppercase;
+	border: 				1px solid #6c757d;
+	background-color: 		#6c757d;
+	color: 					white;
+	border-radius: 			4px;
+	outline: 				none;
+    padding:                0;
+    display:                flex;
+    flex-flow:              row nowrap;
+    justify-content:        center;
+    align-items:            center;
+}
+
+a.btn-link-primary {
+    border: 				1px solid #007bff;
+	background-color: 		#007bff;
+}
+
+a.btn-link-danger {
+    border: 				1px solid #dc3545;
+	background-color: 		#dc3545;
+}
+
+a span {
+	margin-right: 			10px;
+}
+
+a.w25px {
+    width: 					25px;
+}
+
+a.w50px {
+    width: 					50px;
+}
+
+a.w75px {
+    width: 					75px;
+}
+
+a.w100px {
+    width: 					100px;
+}
+
+a.w125px {
+    width: 					125px;
+}
+
+a.w150px {
+    width: 					150px;
+}
+
+a.w175px {
+    width: 					175px;
+}
+
+a.w200px {
+    width: 					200px;
+}
+
+a.w225px {
+    width: 					225px;
+}
+
+a.w250px {
+    width: 					250px;
+}
+
+a.w275px {
+    width: 					275px;
+}
+
+a.w300px {
+    width: 					300px;
+}
+
+a.w325px {
+    width: 					325px;
+}
+
+a.w350px {
+    width: 					350px;
+}
+
+a.w375px {
+    width: 					375px;
+}
+
+a.w400px {
+    width: 					400px;
+}
+
+a.w425px {
+    width: 					425px;
+}
+
+a.w450px {
+    width: 					450px;
+}
+
+a.w475px {
+    width: 					475px;
+}
+
+a.w500px {
+    width: 					500px;
+}

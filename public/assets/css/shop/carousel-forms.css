@@ -1,0 +1,30 @@
+.carousel-container {
+    flex: 					1;
+    overflow: 				hidden;
+}
+
+.carousel-slider {
+    display: 				flex;
+    flex-flow: 				row nowrap;
+    width: 					calc(400% + 300px);
+    gap:					100px;
+}
+
+.carousel-slide {
+    flex: 					1;
+    transition: 			all 0.5s ease-in-out;
+}
+
+.btnPrev,
+.btnNext {
+    padding:				8px 16px;
+    border: 				1px solid rgb(200,200,200);
+    border-radius:  		4px;
+    width:					unset;
+}
+
+.btnPrev:not(.btn-primary):hover,
+.btnNext:not(.btn-primary):hover {
+    cursor: 				pointer;
+    background-color: 		rgba(0, 0, 0, 0.05);
+}

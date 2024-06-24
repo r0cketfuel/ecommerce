@@ -1,0 +1,222 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 8 version
+*/
+
+/* Modal background */
+.modal {
+	display: 						none;
+	position: 						fixed;
+	z-index: 						99900;
+	left: 							0;
+	top: 							0;
+	width: 							100%;
+	height: 						100%;
+	background-color: 				rgba(0,0,0,0.75);
+	-webkit-animation-name: 		fade-in;
+		animation-name: 			fade-in;
+	-webkit-animation-duration: 	0.6s;
+		animation-duration: 		0.6s;
+}
+
+.modal-container {
+    -webkit-box-sizing:             border-box;
+            box-sizing:             border-box;
+	display: 						-webkit-box;
+	display: 						-ms-flexbox;
+	display: 						flex;
+	-webkit-box-orient: 			vertical;
+	-webkit-box-direction: 			normal;
+		-ms-flex-flow: 				column nowrap;
+			flex-flow: 				column nowrap;
+	position: 						relative;
+	top:                        	50%;
+    -webkit-transform:              translateY(-50%);
+        -ms-transform:              translateY(-50%);
+            transform:              translateY(-50%);
+	margin: 						0 auto;
+    max-width:                  	calc(100vw - 80px);
+	-webkit-animation-name: 		animate-top;
+			animation-name: 		animate-top;
+	-webkit-animation-duration: 	0.6s;
+			animation-duration: 	0.6s;
+}
+
+.modal-header {
+	position: 						absolute;
+	width: 							100%;
+	box-sizing: 					border-box;
+	padding: 						20px;
+	text-transform:					uppercase;
+	display: 						flex;
+	justify-content: 				space-between;
+	z-index: 						10;
+}
+
+.modal-header h1 {
+	font-size:						1rem;
+    margin:                     	0px;
+}
+
+.modal-close {
+	font-size:						1rem;
+	font-weight: 					bold;
+    width:                      	25px;
+	text-align: 					center;
+}	
+
+.modal-close:hover,
+.modal-close:focus {
+	text-decoration: 				none;
+	cursor: 						pointer;
+}
+
+.modal-login {
+    display:                    	flex;
+    min-height:                 	450px;
+    box-shadow:                 	0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius:              	8px;
+    overflow:                   	hidden;
+}
+
+.modal-addItem {
+	background: 					white;
+    box-shadow:                 	0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    overflow:                   	hidden;
+	display: 						-webkit-box;
+	display: 						-ms-flexbox;
+	display: 						flex;
+	-webkit-box-orient:				vertical;
+	-webkit-box-direction:			normal;
+		-ms-flex-flow:				row nowrap;
+			flex-flow:				row nowrap;
+	-webkit-box-pack: 				justify;
+		-ms-flex-pack: 				justify;
+			justify-content: 		space-between;
+    gap:                        	20px;
+	padding:						20px;
+
+}
+
+.modal-addItem-leftPanel {
+    width:                          30%;
+}
+
+.modal-addItem-leftPanel img {
+    width:                          100%;
+    aspect-ratio:                   4/3;
+}
+
+.modal-additem-rightPanel {
+    display:                        grid;
+    flex:                           1 1;
+    grid-auto-rows:                 1fr;
+    gap:                            10px;
+}
+
+@media (max-width: 640px)
+{
+    .modal-addItem-leftPanel {
+        display: none;
+    }
+}
+
+
+
+
+
+
+.modal-body {
+	display: 					-webkit-box;
+	display: 					-ms-flexbox;
+	display: 					flex;
+	-webkit-box-orient:					vertical;
+	-webkit-box-direction:					normal;
+	    -ms-flex-flow:					column nowrap;
+	        flex-flow:					column nowrap;
+	-webkit-box-pack: 			justify;
+	    -ms-flex-pack: 			justify;
+	        justify-content: 			space-between;
+    gap:                        20px;
+	padding:					10px;
+}
+
+
+
+.image-modal-content {
+	display: 					-webkit-box;
+	display: 					-ms-flexbox;
+	display: 					flex;
+	-webkit-box-pack: 			center;
+	    -ms-flex-pack: 			center;
+	        justify-content: 			center;
+	margin-top:					100px;
+	position: 					relative;
+	-webkit-animation-name: 			animate-top;
+	        animation-name: 			animate-top;
+	-webkit-animation-duration: 		0.5s;
+	        animation-duration: 		0.5s;
+	margin: 					100px 20px 0 20px;
+}	
+
+.image-modal-content img {
+	height:						100%;
+	width: 						100%;
+	max-width:					1280px;
+}	
+
+.modal-footer {
+	padding: 					2px 16px;
+	background-color: 			#5cb85c;
+	color: 						white;
+}
+
+
+.modal.modal-success .modal-header {
+	color: 						white;
+	background-color: 			#28a745;
+}
+
+.modal.modal-error .modal-header {
+	color: 						white;
+	background-color: 			red;
+}
+
+.modal.modal-primary .modal-header {
+	color: 						white;
+	background-color: 			#007bff;
+}
+
+
+
+@-webkit-keyframes animate-top
+{
+	from {top: -300px; opacity: 0} to {top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); opacity: 1}
+}
+
+@keyframes animate-top
+{
+	from {top: -300px; opacity: 0} to {top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); opacity: 1}
+}
+
+@-webkit-keyframes fade-in
+{
+	from {opacity: 0} to {opacity: 1}
+}
+
+@keyframes fade-in
+{
+	from {opacity: 0} to {opacity: 1}
+}
+
+@-webkit-keyframes zoom
+{
+	from {-webkit-transform:scale(0);transform:scale(0)} to {-webkit-transform:scale(1);transform:scale(1)}
+}
+
+@keyframes zoom
+{
+	from {-webkit-transform:scale(0);transform:scale(0)} to {-webkit-transform:scale(1);transform:scale(1)}
+}

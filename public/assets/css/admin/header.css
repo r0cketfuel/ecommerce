@@ -1,0 +1,37 @@
+header {
+	user-select: 				none;
+}
+
+.main-header {
+    background-color:           rgb(50,50,50);
+}
+
+.main-header-container {
+    margin:                     0 auto;
+    max-width:                  var(--containers-max-width);
+}
+
+.main-header .logo {
+    font-size:                  18px;
+    text-transform:             uppercase;
+	margin: 					0px 0px 0px 10px;
+    color:                      white;
+}
+
+.main-header .login-user {
+    font-size:                  12px;
+    color:                      white;
+}
+
+.main-header nav {
+	flex: 						1 1;
+}
+
+/*=================*/
+/*  MEDIA QUERIES  */
+/*=================*/
+@media (max-width:768px) {
+	.main-header h1 {
+		display: none;
+	}
+}

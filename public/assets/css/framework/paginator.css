@@ -1,0 +1,65 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 8 version
+*/
+
+.paginator-area
+{
+	margin:							50px 0;
+	height: 						40px;
+	display: 						-webkit-box;
+	display: 						-ms-flexbox;
+	display: 						flex;
+	-webkit-box-pack:  				center;
+		-ms-flex-pack:  			center;
+			justify-content:		center;
+	gap:							10px;
+	-webkit-user-select: 			none;
+		-moz-user-select:			none;
+		-ms-user-select: 			none;
+			user-select: 			none;
+}
+
+.paginator-area .paginator-page
+{
+	display: 						-webkit-inline-box;
+	display: 						-ms-inline-flexbox;
+	display: 						inline-flex;
+	-webkit-box-pack: 				center;
+		-ms-flex-pack: 				center;
+			justify-content:		center;
+	-webkit-box-align: 				center;
+		-ms-flex-align: 			center;
+			align-items:			center;
+	height: 						30px;
+	width: 							30px;
+	border: 						1px solid rgb(220,220,220);
+	border-radius: 					4px;
+	-webkit-box-ordinal-group:		3;
+		-ms-flex-order: 			2;
+			order: 					2;
+}
+
+.paginator-area .paginator-page
+{
+	color: 							unset;
+	padding: 						2px 4px;
+}
+
+.paginator-area .paginator-page:hover:not(.page-active)
+{
+	cursor: 						pointer;
+	background-color:				rgb(230,230,230);
+}
+
+.paginator-page:first-child, .paginator-page:last-child
+{
+	width: 							95px;
+}
+
+.paginator-page.page-active
+{
+	background: 					#ff4600CC;
+}

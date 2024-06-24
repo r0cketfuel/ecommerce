@@ -1,0 +1,68 @@
+.user-menu {
+    position:               relative;
+    display:                inline-block;
+}
+
+.user-menu .main-menu-link {
+    display:                flex;
+    gap:                    5px;
+    white-space:            nowrap;
+    cursor:                 pointer;
+    padding:                5px;
+    align-items:            center;
+}
+
+.user-menu .main-menu-submenu {
+    position:               absolute;
+    right:                  0;
+    background:             white;
+    color:                  #2f2f2f;
+    z-index:                10;
+    box-shadow:             5px 5px 10px 0px rgba(0,0,0,0.2);
+    padding:                10px;
+    display:                none;
+    white-space:            nowrap;
+	animation-name: 	    fadein;
+	animation-duration:     0.3s;
+}
+
+@keyframes fadein {
+	from {opacity: 0} to {opacity: 1}
+}
+
+.user-menu .menu-container:hover .main-menu-link .menu-arrow,
+.user-menu .menu-container:hover .main-menu-submenu {
+    display:                flex;
+    flex-flow:              column nowrap;
+}
+
+.submenu-item:hover {
+    background-color:       rgba(0, 0, 0, 0.1);
+}
+
+.user-menu .main-menu-submenu .submenu-item a {
+    display:                flex;
+    padding:                8px;
+}
+
+.user-menu .main-menu-submenu .submenu-item .user-menu-icon {
+    width:                  20px;
+}
+
+.user-menu .main-menu-submenu .submenu-item .user-menu-link {
+    flex:                   1;
+}
+
+.user-menu .main-menu-submenu .submenu-item:last-child {
+    border-top:             1px solid rgb(200, 200, 200);
+}
+
+.user-menu .menu-arrow {
+    transition:             all 0.4s ease;
+    color:                  orangered;
+    backface-visibility:    hidden
+}
+
+.user-menu .menu-container:hover .menu-arrow {
+    transform:              rotate(180deg);
+}

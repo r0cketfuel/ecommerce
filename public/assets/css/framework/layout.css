@@ -1,0 +1,333 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 8 version
+*/
+
+@import url("grid.css");
+@import url("flex.css");
+
+
+/*======*/
+/* TEXT */
+/*======*/
+.text-left {
+    text-align:                     left;
+}
+
+.text-center {
+    text-align:                     center;
+}
+
+.text-right {
+    text-align:                     right;
+}
+
+.text-bold {
+    font-weight:                    bold;
+}
+
+.text-line-through {
+    text-decoration:                line-through;
+}
+
+
+.mt-0 {
+    margin-top:                     0;
+}
+
+.mt-1 {
+    margin-top:                     0.25rem;
+}
+
+.mt-2 {
+    margin-top:                     0.5rem;
+}
+
+.mt-3 {
+    margin-top:                     1rem;
+}
+
+.mt-4 {
+    margin-top:                     1.5rem;
+}
+
+.mt-5 {
+    margin-top:                     3rem;
+}
+
+/*==================*/
+/* FLEX & GRID GAPS */
+/*==================*/
+.gap-0 {
+	gap: 0;
+}
+
+.gap-1 {
+	gap: 0.25rem;
+}
+
+.gap-2 {
+	gap: 0.5rem;
+}
+
+.gap-3 {
+	gap: 1rem;
+}
+
+.gap-4 {
+	gap: 1.5rem;
+}
+
+.gap-5 {
+	gap: 3rem;
+}
+
+.row-gap-0 {
+	row-gap: 0;
+}
+
+.row-gap-1 {
+	row-gap: 0.25rem;
+}
+
+.row-gap-2 {
+	row-gap: 0.5rem;
+}
+
+.row-gap-3 {
+	row-gap: 1rem;
+}
+
+.row-gap-4 {
+	row-gap: 1.5rem;
+}
+
+.row-gap-5 {
+	row-gap: 3rem;
+}
+
+.column-gap-0 {
+	-moz-column-gap: 0;
+	column-gap: 0;
+}
+
+.column-gap-1 {
+	-moz-column-gap: 0.25rem;
+	column-gap: 0.25rem;
+}
+
+.column-gap-2 {
+	-moz-column-gap: 0.5rem;
+	column-gap: 0.5rem;
+}
+
+.column-gap-3 {
+	-moz-column-gap: 1rem;
+	column-gap: 1rem;
+}
+
+.column-gap-4 {
+	-moz-column-gap: 1.5rem;
+	column-gap: 1.5rem;
+}
+
+.column-gap-5 {
+	-moz-column-gap: 3rem;
+	column-gap: 3rem;
+}
+
+
+/*========*/
+/* WIDTHS */
+/*========*/
+.w25px {
+    width: 					25px;
+}
+
+.w50px {
+    width: 					50px;
+}
+
+.w75px {
+    width: 					75px;
+}
+
+.w100px {
+    width: 					100px;
+}
+
+.w125px {
+    width: 					125px;
+}
+
+.w150px {
+    width: 					150px;
+}
+
+.w175px {
+    width: 					175px;
+}
+
+.w200px {
+    width: 					200px;
+}
+
+.w225px {
+    width: 					225px;
+}
+
+.w250px {
+    width: 					250px;
+}
+
+.w275px {
+    width: 					275px;
+}
+
+.w300px {
+    width: 					300px;
+}
+
+.w325px {
+    width: 					325px;
+}
+
+.w350px {
+    width: 					350px;
+}
+
+.w375px {
+    width: 					375px;
+}
+
+.w400px {
+    width: 					400px;
+}
+
+.w425px {
+    width: 					425px;
+}
+
+.w450px {
+    width: 					450px;
+}
+
+.w475px {
+    width: 					475px;
+}
+
+.w500px {
+    width: 					500px;
+}
+
+
+.mw90,
+.mw80,
+.mw70,
+.mw60,
+.mw50,
+.mw40,
+.mw30,
+.mw20,
+.mw10 {
+    width:                              100%;
+}
+
+.mw100 {
+    max-width:                          100%;
+}
+
+.mw90 {
+    max-width:                          90%;
+}
+
+.mw80 {
+    max-width:                          80%;
+}
+
+.mw70 {
+    max-width:                          70%;
+}
+
+.mw60 {
+    max-width:                          60%;
+}
+
+.mw50 {
+    max-width:                          50%;
+}
+
+.mw40 {
+    max-width:                          40%;
+}
+
+.mw30 {
+    max-width:                          30%;
+}
+
+.mw20 {
+    max-width:                          20%;
+}
+
+.mw10 {
+    max-width:                          10%;
+}
+
+.mt10 {
+    margin-top:                         10px;
+}
+
+.mt20 {
+    margin-top:                         20px;
+}
+
+.mt30 {
+    margin-top:                         30px;
+}
+
+.mt40 {
+    margin-top:                         40px;
+}
+
+
+/*===============*/
+/* MEDIA QUERIES */
+/*===============*/
+@media(max-width: 1280px)
+{
+
+}
+
+@media(max-width: 1024px)
+{
+    .main-container {
+        padding:                    15px;
+    }
+}
+
+@media(max-width: 900px)
+{
+
+}
+
+@media(max-width: 768px)
+{
+
+}
+
+@media(max-width: 600px)
+{
+
+}
+
+@media(max-width: 480px)
+{
+
+}
+
+@media(max-width: 320px)
+{
+
+}
