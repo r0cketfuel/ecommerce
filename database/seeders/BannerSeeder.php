@@ -21,41 +21,41 @@ class BannerSeeder extends Seeder
         $hasta = $date->format("Y-m-d H:i:s");
         
         Banner::create([
-            "imagen"        => "1.png",
+            "imagen"        => "1.webp",
             "descripcion"   => "Banner 1",
-            "link"          => "semana_electrohogar",
+            "link"          => "ofertazos_hogar",
             "valido_desde"  => $desde,
             "valido_hasta"  => $hasta
         ]);
 
         Banner::create([
-            "imagen"        => "2.png",
+            "imagen"        => "2.webp",
             "descripcion"   => "Banner 2",
-            "link"          => "electro",
+            "link"          => "ofertas_gamers",
             "valido_desde"  => $desde,
             "valido_hasta"  => $hasta
         ]);
 
         Banner::create([
-            "imagen"        => "3.png",
+            "imagen"        => "3.webp",
             "descripcion"   => "Banner 3",
-            "link"          => "amigos_beneficios",
+            "link"          => "ofertas_bienestar",
             "valido_desde"  => $desde,
             "valido_hasta"  => $hasta
         ]);
 
         Banner::create([
-            "imagen"        => "4.png",
+            "imagen"        => "4.webp",
             "descripcion"   => "Banner 4",
-            "link"          => "megaofertas",
+            "link"          => "especial_zapatillas",
             "valido_desde"  => $desde,
             "valido_hasta"  => $hasta
         ]);
 
         Banner::create([
-            "imagen"        => "5.png",
+            "imagen"        => "5.webp",
             "descripcion"   => "Banner 5",
-            "link"          => "especial_juguetes",
+            "link"          => "super_descuentos",
             "valido_desde"  => $desde,
             "valido_hasta"  => $hasta
         ]);
