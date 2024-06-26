@@ -1,1 +1,0 @@
-[Mon Jun 24 10:03:10.371959 2024] [php:error] [pid 52414] [client 127.0.0.1:40700] PHP Fatal error:  Trait "Laravel\\Sanctum\\HasApiTokens" not found in /var/www/html/ecommercenew/app/Models/Usuario.php on line 15, referer: http://ecommercenew/shop/login
