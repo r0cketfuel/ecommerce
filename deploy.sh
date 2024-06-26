@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Clonación del repositorio
-git clone https://github.com//ecommerce.git
+# git clone https://github.com//ecommerce.git
 
 # Navegación al directorio del proyecto
-cd /home/fernand1/ecommerce
+# cd /home/fernand1/ecommerce
 
 # Renombrado del archivo .env
 mv .env.example .env
