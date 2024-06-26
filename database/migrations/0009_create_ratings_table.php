@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedMediumInteger('visualizaciones')->default(0);
             $table->unsignedMediumInteger('puntuaciones')->default(0);
             $table->unsignedMediumInteger('sumatoria')->default(0);
-            $table->unsignedFloat('promedio')->default(0);
+            $table->Float('promedio')->unsigned()->default(0);
             $table->comment('Tabla con las estadísticas de cada artículo');
         });
     }
