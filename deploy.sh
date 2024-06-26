@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Clonación del repositorio
-# git clone https://github.com//ecommerce.git
+# git clone https://github.com/r0cketfuel/ecommerce.git
 
 # Navegación al directorio del proyecto
 # cd /home/fernand1/ecommerce
